@@ -24,15 +24,15 @@ const ProductUser = () => {
       setIsLoading(true); // بداية التحميل
       try {
         if (search) {
-          // http://localhost:3000/backend/api/products
+          // https://johntekvalves.com/backend/api/products
           const res = await axios.get(
-            `http://localhost:80/backend/api/products/${search}`
+            `https://johntekvalves.com/backend/api/products/${search}`
           );
           console.log(res.data);
           SetIn(Array.isArray(res.data) ? res.data : [res.data]);
         } else {
           const res = await axios.get(
-            "http://localhost:80/backend/api/products"
+            "https://johntekvalves.com/backend/api/products"
           );
           SetIn(res.data);
         }
@@ -59,7 +59,7 @@ const ProductUser = () => {
       <div className={ i18n.language  === "ar" ?  "C1AR" :"C1user"}>
         <img
           className= {i18n.language === "ar" ? "imageUserAR" : "imageUser"}
-          src={`http://localhost:80/backend/storage/products/images/${e.image}`}
+          src={`https://johntekvalves.com/backend/storage/products/images/${e.image}`}
           alt="helooo i am not heer"
         />
       </div>
@@ -77,7 +77,7 @@ const ProductUser = () => {
             </p>
             <div>
             <a
-              href={`http://localhost:80/backend/storage/products/pdfs/${e.pdf}`}
+              href={`https://johntekvalves.com/backend/storage/products/pdfs/${e.pdf}`}
               target="_blank"
               rel="noopener noreferrer"
             >

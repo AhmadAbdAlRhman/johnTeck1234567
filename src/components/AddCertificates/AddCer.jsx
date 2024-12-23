@@ -29,7 +29,7 @@ const AddCer = ({ onAdd, navigate }) => {
     }
     try {
       const res = await axios.post(
-        `http://localhost:3000/backend/api/certificates/store`,
+        `https://johntekvalves.com/backend/api/certificates/store`,
         formData,
         {
           headers: {

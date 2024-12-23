@@ -26,7 +26,7 @@ const ShowCertificateforAdmain = ({cerinfo, getCer}) => {
   const ShowCer = cerinfo?.map((i) => (
     <div className="cer1" key={i.id}>
       <a
-        href={`http://localhost:3000/backend/storage/Certificates/pdf/${i.pdf}`}
+        href={`https://johntekvalves.com/backend/storage/Certificates/pdf/${i.pdf}`}
         target="_blank"
         rel="noopener noreferrer"
         onClick={handlePdfClick}
@@ -36,7 +36,7 @@ const ShowCertificateforAdmain = ({cerinfo, getCer}) => {
         ) : (
           <img
             className="cer2"
-            src={`http://localhost:3000/backends/storage/Certificates/image/${i.image}`}
+            src={`https://johntekvalves.com/backends/storage/Certificates/image/${i.image}`}
             alt="hellooo i am not heer"
           />
         )}

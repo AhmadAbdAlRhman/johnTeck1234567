@@ -6,7 +6,7 @@ const authToken = Cookies.get('authToken');
 const DeleteCer = (props) => {
   const deleteprod = async (id) => {
     try {
-      const req = await axios.post("http://localhost:3000/backend/api/deletecertificates"
+      const req = await axios.post("https://johntekvalves.com/backend/api/deletecertificates"
         , {
         id,
       },{
