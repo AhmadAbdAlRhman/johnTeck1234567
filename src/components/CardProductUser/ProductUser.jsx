@@ -26,13 +26,13 @@ const ProductUser = () => {
         if (search) {
           // http://localhost:3000/backend/api/products
           const res = await axios.get(
-            `http://localhost:3000/backend/api/products/${search}`
+            `http://localhost:80/backend/api/products/${search}`
           );
           console.log(res.data);
           SetIn(Array.isArray(res.data) ? res.data : [res.data]);
         } else {
           const res = await axios.get(
-            "http://localhost:3000/backend/api/products"
+            "http://localhost:80/backend/api/products"
           );
           SetIn(res.data);
         }
@@ -59,7 +59,7 @@ const ProductUser = () => {
       <div className={ i18n.language  === "ar" ?  "C1AR" :"C1user"}>
         <img
           className= {i18n.language === "ar" ? "imageUserAR" : "imageUser"}
-          src={`http://localhost:3000/backend/storage/products/images/${e.image}`}
+          src={`http://localhost:80/backend/storage/products/images/${e.image}`}
           alt="helooo i am not heer"
         />
       </div>
@@ -77,7 +77,7 @@ const ProductUser = () => {
             </p>
             <div>
             <a
-              href={`http://localhost:3000/backend/storage/products/pdfs/${e.pdf}`}
+              href={`http://localhost:80/backend/storage/products/pdfs/${e.pdf}`}
               target="_blank"
               rel="noopener noreferrer"
             >
