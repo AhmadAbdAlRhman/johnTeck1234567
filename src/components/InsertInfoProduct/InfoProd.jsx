@@ -20,7 +20,7 @@ const InfoProd = (props) => {
     standard: initialStand,
     image: initialImage,
     pdf: initialPdf,
-    navigate,
+    // navigate,
     addProductToList,
   } = props;
   const [EnglishName, setName] = useState(initialName || "");
@@ -104,7 +104,7 @@ const InfoProd = (props) => {
     try {
       const res = await axios.post(
         `
-        http://localhost:8000/api/${endApi}`,
+        https://localhost:8000/backend/api/${endApi}`,
         formData,
         {
           headers: {
@@ -114,16 +114,17 @@ const InfoProd = (props) => {
           withCredentials: true 
         }
       );
-      if (res.status === 200) {
+      if (res.status === 201) {
         // بعد حفظ البيانات بنجاح، نقوم بتحديث المنتجات
         const newProduct = res.data; // نحصل على المنتج الجديد من الاستجابة
         addProductToList(newProduct);
         console.log(newProduct);
         console.log(res.request);
         // إغلاق النافذة المنبثقة
-        closeModal();
+        // closeModal();
         // الانتقال إلى صفحة Dashboard
-        navigate("/Dashboardproducts", { replace: true });
+        // navigate("/Dashboardproducts", { replace: true });
+        window.location.reload(false);
       }
     } catch (err) {
       console.log(err); // طباعة الخطأ في وحدة التحكم

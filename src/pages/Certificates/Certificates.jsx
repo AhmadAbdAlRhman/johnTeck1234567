@@ -14,7 +14,7 @@ const Certificates = () => {
       setIsLoading(true); // بداية التحميل
       try {
         const res1 = await axios.get(
-          "https://johntekvalves.com/backend/api/certificates"
+          "https://localhost:8000/backend/api/certificates"
         );
         SetCert(res1.data);
       } catch (err) {
@@ -38,7 +38,7 @@ const Certificates = () => {
   const arrcerte = certe.map((e) => (
     <div className="cer1">
       <a
-        href={`https://johntekvalves.com/backend/storage/Certificates/pdf/${e.pdf}`}
+        href={`https://localhost:8000/backend/storage/Certificates/pdf/${e.pdf}`}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -47,7 +47,7 @@ const Certificates = () => {
         ) : ( */}
           <img
             className="cer2"
-            src={`https://johntekvalves.com/backend/storage/Certificates/image/${e.image}`}
+            src={`https://localhost:8000/backend/storage/Certificates/image/${e.image}`}
             alt="helooo i am not heer"
           />
         {/* )} */}
