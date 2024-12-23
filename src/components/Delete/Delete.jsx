@@ -7,7 +7,7 @@ export const Delete = (props) => {
   const deleteprod = async (id) => {
     try {
       const req = await axios.post(
-        `https://localhost:8000/backend/api/delete`,{id},{
+        `http://localhost:8000/backend/api/delete`,{id},{
           headers: {
             'Authorization': `Bearer ${authToken}`,
             "Content-Type": "multipart/form-data",
