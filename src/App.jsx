@@ -1,7 +1,6 @@
 import Home from "./pages/Home/Home"; // استيراد المكون
 import "./App.css";
 import DashBoard from "./pages/DashBoard/DashBoard";
-// import { Router } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Routes, Route } from "react-router";
 import Product from "./pages/Product/Product";
@@ -19,7 +18,7 @@ export default function App() {
 
   // تحقق من مسار الصفحة
   const isAboutPage = location.pathname === "/AboutUs";
-
+  console.log(process.env.REACT_APP_API_URL);
   return (
     <Suspense fallback={<div>Loading application...</div>}>
     <div

@@ -12,7 +12,7 @@ const DashBoardCertificate = () => {
   // دالة لجلب الشهادات من API
   const getCer = async () => {
     try {
-      const response = await axios.get("https://johntekvalves.com/backend/api/certificates");
+      const response = await axios.get("https://johntekvalves.com/backendapi/certificates");
       setCerInfo(response.data);
     } catch (error) {
       console.error("Error fetching certificates:", error);

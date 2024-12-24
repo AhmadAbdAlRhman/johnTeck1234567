@@ -104,7 +104,7 @@ const InfoProd = (props) => {
     try {
       const res = await axios.post(
         `
-        https://johntekvalves.com/backend/api/${endApi}`,
+        https://johntekvalves.com/backendapi/${endApi}`,
         formData,
         {
           headers: {
@@ -114,7 +114,7 @@ const InfoProd = (props) => {
           withCredentials: true 
         }
       );
-      if (res.status === 201) {
+      if (res.status === 201 || res.status ===204) {
         // بعد حفظ البيانات بنجاح، نقوم بتحديث المنتجات
         const newProduct = res.data; // نحصل على المنتج الجديد من الاستجابة
         addProductToList(newProduct);

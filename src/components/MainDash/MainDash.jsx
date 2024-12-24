@@ -11,7 +11,7 @@ function MainDash() {
   const req=async(e)=>{
     e.preventDefault();
     try{
-      const r=await axios.post("https://johntekvalves.com/backend/api/admin/login",{password},{headers: {
+      const r=await axios.post("https://johntekvalves.com/backendapi/admin/login",{password},{headers: {
         'Content-Type': 'application/json'},
          withCredentials: true}); // If your backend requires credentials like cookies;
       console.log(r.status)
