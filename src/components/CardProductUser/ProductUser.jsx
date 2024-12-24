@@ -32,7 +32,7 @@ const ProductUser = () => {
           SetIn(Array.isArray(res.data) ? res.data : [res.data]);
         } else {
           const res = await axios.get(
-            "https://johntekvalves.com/backendapi/products"
+            "https://johntekvalves.com/backend/api/products"
           );
           SetIn(res.data);
         }
