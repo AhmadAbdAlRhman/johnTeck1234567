@@ -18,7 +18,6 @@ export default function App() {
 
   // تحقق من مسار الصفحة
   const isAboutPage = location.pathname === "/AboutUs";
-  console.log(process.env.REACT_APP_API_URL);
   return (
     <Suspense fallback={<div>Loading application...</div>}>
     <div
