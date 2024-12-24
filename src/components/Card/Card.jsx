@@ -24,7 +24,7 @@ const Card = () => {
   // عرض البيانات من الداتا
   const [productinfo, setproductInfo] = useState([]);
   const getType = async () => {
-    const response = await axios.get("https://johntekvalves.com/backendapi/products");
+    const response = await axios.get("https://johntekvalves.com/backend/api/products");
     setproductInfo(response.data);
   };
 
@@ -45,14 +45,14 @@ const Card = () => {
       <p>{i.id}</p>
       <img
         className="imageDashboard"
-        src={`https://johntekvalves.com/backendstorage/products/images/${i.image}`}
+        src={`https://johntekvalves.com/backend/storage/products/images/${i.image}`}
         alt="Product Imag"
       />
       <div className="productdetails">
         <h1 className="productName">{i.EnglishName}</h1>
         <div className="PI">
           <p className="productdeDescription">{i.EnglishDescription}</p>
-          <Link to={`https://johntekvalves.com/backendstorage/products/pdfs/${i.pdf}`}>
+          <Link to={`https://johntekvalves.com/backend/storage/products/pdfs/${i.pdf}`}>
             <img
               className="pdfuser"
               src={require("../../Assets/images__3_-removebg-preview.png")}

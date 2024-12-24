@@ -104,7 +104,7 @@ const InfoProd = (props) => {
     try {
       const res = await axios.post(
         `
-        https://johntekvalves.com/backendapi/${endApi}`,
+        https://johntekvalves.com/backend/api/${endApi}`,
         formData,
         {
           headers: {
