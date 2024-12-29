@@ -7,6 +7,7 @@ import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons"; // استي
 import "./Card.css";
 import InfoProd from "../InsertInfoProduct/InfoProd";
 import { Delete } from "../Delete/Delete";
+import Standard from "../BtnStand/Stander";
 
 const Card = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -35,6 +36,7 @@ const Card = () => {
   // تعريف دوال فتح وإغلاق المودال للحذف
   const [modalOpen, setModalOpen] = useState(false);
   const opendelete = (product) => {
+    console.log(product);
     setSelectedProduct(product);
     setModalOpen(true);
   };
@@ -42,7 +44,7 @@ const Card = () => {
 
   const showname = productinfo?.map((i) => (
     <div key={i.id} className="card">
-      <p>{i.id}</p>
+      
       <img
         className="imageDashboard"
         src={`https://johntekvalves.com/backend/storage/products/images/${i.image}`}
@@ -52,13 +54,19 @@ const Card = () => {
         <h1 className="productName">{i.EnglishName}</h1>
         <div className="PI">
           <p className="productdeDescription">{i.EnglishDescription}</p>
-          <Link to={`https://johntekvalves.com/backend/storage/products/pdfs/${i.pdf}`}>
+          <div>
+          <a href={`https://johntekvalves.com/backend/storage/products/pdfs/${i.pdf}`} target="_blank"
+              rel="noopener noreferrer">
             <img
               className="pdfuser"
               src={require("../../Assets/images__3_-removebg-preview.png")}
               alt="Product PDF"
             />
-          </Link>
+          </a>
+          {i.standard !== "no information" && (
+                <Standard standardData={i.standard} />
+          )}
+          </div>
         </div>
       </div>
       <div className="icons">
@@ -66,7 +74,7 @@ const Card = () => {
           <FontAwesomeIcon icon={faEdit} size="4x" />
         </div>
         <p className="nameicons1">Edit</p>
-        <div className="iconimage" onClick={() => opendelete(i)}>
+        <div className="iconimage" onClick={() => {opendelete(i);}}>
           <FontAwesomeIcon icon={faTrash} size="4x" />
         </div>
         <p className="nameicons2">Delete</p>

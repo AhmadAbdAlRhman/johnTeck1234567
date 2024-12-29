@@ -1,10 +1,12 @@
-import React ,{ useState } from "react";
+import React ,{ useContext,useState } from "react";
 import "./MainDash.css";
+import Cookies from "js-cookie";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { HeaderAdmin } from "../HeaderAdmin/HeaderAdmin";
-
+import { AuthContext } from "../../Authentication/AuthProvider";
 function MainDash() {
+  const { login } = useContext(AuthContext);
   const [password, setPassword] = useState(""); // لتخزين قيمة كلمة المرور
   const [showPassword, setShowPassword] = useState(false); // للتحكم في عرض النص أو النقاط
   const navigate=useNavigate();
@@ -16,12 +18,9 @@ function MainDash() {
          withCredentials: true}); // If your backend requires credentials like cookies;
       console.log(r.status)
       if(r.status===200){
-        // // افترض أن التوكن قادم في response.data.token
-        // const token = r.data.token;
-
-        // // تخزين التوكن في الكوكيز
-        // Cookies.set("authToken", token, { expires: 7 }); // يتم التخزين لمدة 7 أيام
-
+        const token = r.data.token;
+        const mockToken = token;
+        login(mockToken);
         navigate("/Dashboardproducts")
       }
     }

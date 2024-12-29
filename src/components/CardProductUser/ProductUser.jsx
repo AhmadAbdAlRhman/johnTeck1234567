@@ -3,7 +3,7 @@ import "./ProductUser.css";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Stander from "../BtnStand/Stander";
+import Standard from "../BtnStand/Stander";
 import { useTranslation } from "react-i18next";
 
 const ProductUser = () => {
@@ -87,12 +87,12 @@ const ProductUser = () => {
                 <img
                   className= {i18n.language === "ar" ? "pdfuserAR" : "pdfuser"}
                   src={require("../../Assets/images__3_-removebg-preview.png")}
-                  alt="helooo i am not heer"
+                  alt="product img"
                 />
               {/* )} */}
             </a>
             {e.standard !== "no information" && (
-                <Stander standardData={e.standard} />
+                <Standard standardData={e.standard} />
               )}
             </div>
           </div>

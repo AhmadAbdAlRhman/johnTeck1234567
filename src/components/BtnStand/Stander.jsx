@@ -23,7 +23,7 @@ const Stander = (props) => {
           type="submit"
           onClick={handleButtonClick}
         >
-          Standers
+          Standards
         </button>
 
       {/* عرض النافذة المنبثقة */}

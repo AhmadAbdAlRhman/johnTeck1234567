@@ -48,7 +48,7 @@ const Certificates = () => {
           <img
             className="cer2"
             src={`https://johntekvalves.com/backend/storage/Certificates/image/${e.image}`}
-            alt="helooo i am not heer"
+            alt="certificate img"
           />
         {/* )} */}
       </a>

@@ -26,7 +26,7 @@ const DeleteCer = (props) => {
 
   return (
     <div>
-      <h1> Are you sure you want top delete this Certificate ???{props.id}</h1>
+      <h1> Are you sure you want to delete this Certificate ???{props.id}</h1>
       <form onSubmit={(e) => e.preventDefault()}>
         <button
           className="btnSub"

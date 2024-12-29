@@ -1,13 +1,15 @@
 .add {
-  position: fixed; /* لجعل العنصر دائمًا في نفس المكان بالنسبة للشاشة */
-  top: 20%; /* تحديد الموضع العمودي بالنسبة إلى أعلى الشاشة */
+  margin-top: 20px;
+  position: absolute;
+  top: 12.5%;
+ /* تحديد الموضع العمودي بالنسبة إلى أعلى الشاشة */
   left: 50%; /* تحديد الموضع الأفقي في منتصف العرض */
   transform: translateX(-50%); /* محاذاة الزر ليتوسط الشاشة أفقياً */
   background-color: rgba(218, 227, 243, 0.9); /* تحسين الخلفية بلون شفاف */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem; /* مسافة داخلية مناسبة */
+  padding: 1rem 1rem; /* مسافة داخلية مناسبة */
   border: none; /* إزالة الإطار */
   border-radius: 30px; /* حواف دائرية */
   cursor: pointer; /* شكل مؤشر الفأرة */

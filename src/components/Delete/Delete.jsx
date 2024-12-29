@@ -15,7 +15,7 @@ export const Delete = (props) => {
           withCredentials: true 
         }
       );
-      console.log("Deleted successfully:", req.data); // تحقق من الاستجابة
+      //console.log("Deleted successfully:", req.data); // تحقق من الاستجابة
       props.getType();
       props.closedelete();
     } catch (err) {
@@ -25,7 +25,7 @@ export const Delete = (props) => {
 
   return (
     <div>
-      <h1> Are you sure you want top delete this product ???{props.id}</h1>
+      <h1> Are you sure you want to delete this product ???{props.id}</h1>
       <form onSubmit={(e) => e.preventDefault()}>
         <button
           className="btnSub"
